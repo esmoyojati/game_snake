@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Snake Xenzia Classic</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Kontainer utama game -->
+  <div id="game-wrapper">
+
+    <!-- Header: Judul & Skor -->
+    <div id="header">
+      <span id="title-text">SNAKE XENZIA</span>
+      <span id="score-text">SCORE: <span id="score-value">0</span></span>
+    </div>
+
+    <!-- Canvas Three.js akan di-append ke sini -->
+    <div id="canvas-container"></div>
+
+    <!-- Overlay: Start Screen -->
+    <div id="overlay" class="overlay">
+      <div id="overlay-content">
+        <p id="overlay-title">SNAKE XENZIA</p>
+        <p id="overlay-sub">CLASSIC</p>
+        <button id="btn-start" class="game-btn">[ START ]</button>
+        <p id="overlay-hint">Use Arrow Keys to move</p>
+      </div>
+    </div>
+
+    <!-- Overlay: Game Over Screen -->
+    <div id="gameover-overlay" class="overlay hidden">
+      <div id="gameover-content">
+        <p id="gameover-title">GAME OVER</p>
+        <p id="final-score-text">SCORE: <span id="final-score">0</span></p>
+        <button id="btn-restart" class="game-btn">[ RESTART ]</button>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Three.js CDN (r128 - kompatibel & stabil) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
